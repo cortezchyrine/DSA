@@ -4,7 +4,7 @@ package cortezIS2;
 SOURCE CODE: ArrayStack.java
 AUTHOR NAME: Cortez, Chyrine A.
 GITHUB URL: github.com/cortezchyrine
-LAST UPDATE: [08/15/2016]
+LAST UPDATE: [08/18/2016]
 */
 
 //start
