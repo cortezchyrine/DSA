@@ -2,34 +2,55 @@ package cortez;
 import java.util.*;
 public class TotalMax {
 	
-	public static void main (String[] args){
+	static int[] array;
+	static int arraysize;
+	static int sum;
+	static int max = 0;
+	static double average;
+	 
+	static public void input(){
 		 Scanner in = new Scanner(System.in);
+		 Random rad = new Random();
 		 
-		 int[] array = {3, 10, 500, 4};
-		 int sum = 0;
-		 int max = 0;
+		 System.out.print("Enter an array size: ");
+		 arraysize = in.nextInt();
+		 array = new int[arraysize];
+		 for (int i=0; i < arraysize; i++){
+			 array[i] = rad.nextInt(1000);
 		 
-
-		 
-		 for (int i = 0; i < array.length; i++){
-			 
-			 if (array[i] > max){
-				 max = array[i];
-			 }
-			 System.out.println("Enter an Arrays");
-			 System.out.println("array["+i+"] = " + array[i]);
+			 System.out.print(array[i]);
+			 System.out.println();
 			
 		 }
-		 System.out.println("");
-		 for (int i: array){
-			 sum += i;
-		 }
-		 double average = sum / array.length;
+	 }
+	 
+	static public void max() {
+		for(int a = 0; a < arraysize; a++){
+			if(array[a] > max)
+				max = array[a];
+		}
+		System.out.println("\nMax = " + max);
+	}
+	
+	static public void sum(){
+		for(int a = 0; a < arraysize; a++){
+			sum = sum + array[a];
+		}
+		System.out.println("\nSum = " + sum);
+	}
+
+	static public void average() {
+		 average = sum / arraysize;
+		 System.out.println("\nAverage = " + average);
 		 
-		 System.out.println("Sum = " + sum);
-		 System.out.println("Average = " + average);
-		 System.out.println("Max = " + max);
-		 
-		 
+	}
+
+
+	public static void main (String[] args){
+	 
+		 input();
+		 sum();
+		 average();
+		 max();
 	 }
 }
